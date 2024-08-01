@@ -48,14 +48,15 @@ jobs:
       fail-fast: false
       matrix:
         platform: [
+          'debian:12',
           'clearlinux:base',
           'rockylinux:9',
           'almalinux:9',
           'opensuse/leap:15',
           'archlinux:base',
           'manjarolinux/base',
-          'ubuntu:23.10',
           'ubuntu:24.04',
+          'ubuntu:24.10',
           'oraclelinux:9',
           'fedora:39',
           'fedora:40',

@@ -39,6 +39,7 @@ on:
       - '.github/workflows/style.yml'
       - '.github/workflows/windows.yml'
       - '.vscode/**'
+      - '.devcontainer/**'
       - '.clang-format'
       - '.codespellrc'
       - '.editorconfig'
@@ -94,6 +95,7 @@ on:
       - '.github/workflows/style.yml'
       - '.github/workflows/windows.yml'
       - '.vscode/**'
+      - '.devcontainer/**'
       - '.clang-format'
       - '.codespellrc'
       - '.editorconfig'
@@ -161,6 +163,8 @@ jobs:
             flags: ""
 
     name: Ubuntu 22.04 ${{ matrix.compiler.cc }} using ${{ matrix.flags.name }}
+
+    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4
@@ -302,6 +306,8 @@ jobs:
             flags: ""
 
     name: Ubuntu 20.04 ${{ matrix.compiler.cc }} using ${{ matrix.flags.name }}
+
+    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4

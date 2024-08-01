@@ -39,6 +39,7 @@ on:
       - '.github/workflows/style.yml'
       - '.github/workflows/windows.yml'
       - '.vscode/**'
+      - '.devcontainer/**'
       - '.clang-format'
       - '.codespellrc'
       - '.editorconfig'
@@ -94,6 +95,7 @@ on:
       - '.github/workflows/style.yml'
       - '.github/workflows/windows.yml'
       - '.vscode/**'
+      - '.devcontainer/**'
       - '.clang-format'
       - '.codespellrc'
       - '.editorconfig'
@@ -148,7 +150,7 @@ jobs:
           sync: rsync
           copyback: false
           prepare: |
-            /usr/sbin/pkg_add git pkgconf libtool gcc7 automake autoconf pcre2 sqlite3 openssl gmake cmocka
+            /usr/sbin/pkg_add git pkgconf libtool gcc13 automake autoconf pcre2 sqlite3 openssl gmake cmocka ca_certificates
           run: |
             export CC="${{ matrix.compiler.cc }}"
             export CXX="${{ matrix.compiler.cxx }}"
